@@ -2,7 +2,30 @@ from cryptography.fernet import Fernet
 import os
 
 
-def write_key():
+# CONSTANTS --------------------------------------------- #
+CMDL_WIDTH = 60
+
+# HELPER FUNCTIONS -------------------------------------- #
+def print_ln(sign, amount):
+    print(str(sign * amount))
+
+
+def print_msg(msg, centered=False):
+    if centered:
+        if len(msg) > 60:
+            msg = msg.split()
+            c = -1
+
+            for i in range(len(msg)):
+                if c + 1 + len(msg[i])
+
+        print(msg.center(CMDL_WIDTH))
+    else:
+        print(msg)
+
+
+# FUNCTIONALITIES --------------------------------------- #
+def get_key():
     key = ""
 
     if not os.path.isfile("key.key"):
@@ -15,12 +38,34 @@ def write_key():
         with open("key.key") as f:
             key = f.readline()
 
-    return key
+    return str(key)
+
+
+def generate_password():
+    pass
+
+def add_password():
+    pass
+
+
+def view_password():
+    pass
+
+
+def confirm_exit():
+    pass
+
+
+def menu():
+    msg = "WELCOME IN PASSWORD MANAGER"
+    print_ln("-", 60)
+    print_msg(msg)
+
 
 
 def main():
-    key = write_key()
-    print(key)
+    key = get_key()
+    # print(key)
 
 
 if __name__ == "__main__":
