@@ -12,14 +12,17 @@ def print_ln(sign, amount):
 
 def print_msg(msg, centered=False):
     if centered:
-        if len(msg) > 60:
-            msg = msg.split()
-            c = -1
+        pass
+        # TODO: fix this -------------------------------- !
+        # if len(msg) > 60:
+        #     msg = msg.split()
+        #     c = -1
 
-            for i in range(len(msg)):
-                if c + 1 + len(msg[i])
+        #     for i in range(len(msg)):
+        #         if c + 1 + len(msg[i]) >= 60:
 
-        print(msg.center(CMDL_WIDTH))
+
+        # print(msg.center(CMDL_WIDTH))
     else:
         print(msg)
 
